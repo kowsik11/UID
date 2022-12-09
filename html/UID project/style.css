@@ -1,0 +1,166 @@
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 0px;
+    background: #e3e6f3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 999;
+    position: sticky;
+    top: 0;
+    left: 0;
+    scroll-behavior: none;
+}
+
+.logo{
+    padding: 0 10px;
+     position: absolute;
+    float: left;
+    top: 2%;
+}
+#navbar{
+    display: flex;
+    position: absolute;
+    top: 5%;
+    right: 13px;
+
+}
+#navbar li{
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.03s ease;
+}
+
+#navbar li a:hover,#navbar li a.active{
+    color: #088178;
+}
+
+#navbar li a.active::after,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: #088178;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+
+.card {
+    z-index: 0;
+    background-color: #eceff1;
+    padding-bottom: 20px;
+    margin-top: 90px;
+    margin-bottom: 90px;
+    border-radius: 10px;
+}
+
+.top {
+    padding-top: 40px;
+    padding-left: 13% !important;
+    padding-right: 13% !important;
+}
+
+/* Icon progressbar */
+
+#progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    color: #455a64;
+    padding-left: 0;
+    margin-top: 30px;
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 13px;
+    width: 25%;
+    float: left;
+    position: relative;
+    font-weight: 400;
+}
+
+#progressbar .step0::before {
+    font-family: FontAwesome;
+    content: '\f10c';
+    color: #fff;
+}
+
+#progressbar li::before {
+    width: 40px;
+    height: 40px;
+    line-height: 45px;
+    display: block;
+    font-size: 20px;
+    background: #c5cae9;
+    border-radius: 50%;
+    margin: auto;
+    padding: 0;
+}
+
+/* Progressbar connector */
+#progressbar li::after {
+    content: '';
+    width: 100%;
+    height: 12px;
+    background-color: #c5cae9;
+    position: absolute;
+    top: 16px;
+    left: 0;
+    z-index: -1;
+}
+
+#progressbar li:last-child::after {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    left: -50%;
+}
+
+#progressbar li:nth-child(2)::after,
+#progressbar li:nth-child(3)::after {
+    left: -50%;
+}
+
+#progressbar li:first-child::after {
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    left: 50%;
+}
+
+/* Color number of the step and the connect tor before it */
+
+#progressbar li.active::before,
+#progressbar li.active::after {
+    background-color: #651fff;
+}
+
+#progressbar li.active::before {
+    font-family: FontAwesome;
+    content: '\f00c';
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    margin-right: 15px;
+}
+
+.icon-content {
+    padding-bottom: 20px;
+}
+
+@media screen and (max-width: 992px) {
+    .icon-content {
+        width: 50%;
+    }
+}
